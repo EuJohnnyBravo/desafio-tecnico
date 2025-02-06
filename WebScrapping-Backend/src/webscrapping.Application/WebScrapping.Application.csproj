@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebScrapping.Communication\WebScrapping.Communication.csproj" />
+    <ProjectReference Include="..\WebScrapping.Domain\WebScrapping.Domain.csproj" />
+    <ProjectReference Include="..\WebScrapping.Exeption\WebScrapping.Exception.csproj" />
+  </ItemGroup>
+
 </Project>
