@@ -81,3 +81,5 @@ D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\
 D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\obj\Debug\net6.0\WebScrapping.API.pdb
 D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\obj\Debug\net6.0\WebScrapping.API.genruntimeconfig.cache
 D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\obj\Debug\net6.0\ref\WebScrapping.API.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\bin\Debug\net6.0\AutoMapper.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\webscrapping.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
