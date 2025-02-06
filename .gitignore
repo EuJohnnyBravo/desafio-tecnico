@@ -15,4 +15,6 @@ data
 *.ntvs*
 *.njsproj
 *.sw?
-WebScrapping-Backend/src/webscrapping.API/bin/
+WebScrapping-Backend/src/**/bin/
+WebScrapping-Backend/src/**/obj/
+WebScrapping-Backend/src/WebScrapping.Infrastructure/obj/Debug/net6.0/WebScrapping.Infrastructure.sourcelink.json
