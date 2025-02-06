@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\webscrapping.Application\WebScrapping.Application.csproj" />
+    <ProjectReference Include="..\WebScrapping.Communication\WebScrapping.Communication.csproj" />
+    <ProjectReference Include="..\WebScrapping.Exeption\WebScrapping.Exception.csproj" />
+    <ProjectReference Include="..\WebScrapping.Infrastructure\WebScrapping.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

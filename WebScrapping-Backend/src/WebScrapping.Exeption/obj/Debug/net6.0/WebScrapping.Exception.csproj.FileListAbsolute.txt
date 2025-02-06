@@ -1,0 +1,11 @@
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\bin\Debug\net6.0\WebScrapping.Exception.deps.json
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\bin\Debug\net6.0\WebScrapping.Exception.dll
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\bin\Debug\net6.0\WebScrapping.Exception.pdb
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.GeneratedMSBuildEditorConfig.editorconfig
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.AssemblyInfoInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.AssemblyInfo.cs
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.csproj.CoreCompileInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.dll
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\refint\WebScrapping.Exception.dll
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\WebScrapping.Exception.pdb
+D:\user\Documents\Dev\desafio-tecnico\desafio-webscrapping-backend\src\WebScrapping.Exeption\obj\Debug\net6.0\ref\WebScrapping.Exception.dll

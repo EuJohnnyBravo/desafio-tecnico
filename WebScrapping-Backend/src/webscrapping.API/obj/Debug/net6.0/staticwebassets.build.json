@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "QWOHTs/oGJqB1XNSVx5swRaAAWefXRYH+fNw4APYA0M=",
+  "Source": "webscrapping.API",
+  "BasePath": "_content/webscrapping.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
