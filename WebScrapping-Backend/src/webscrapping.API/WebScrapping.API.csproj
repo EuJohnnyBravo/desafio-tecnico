@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\webscrapping.Application\WebScrapping.Application.csproj" />
     <ProjectReference Include="..\WebScrapping.Communication\WebScrapping.Communication.csproj" />
     <ProjectReference Include="..\WebScrapping.Exeption\WebScrapping.Exception.csproj" />
