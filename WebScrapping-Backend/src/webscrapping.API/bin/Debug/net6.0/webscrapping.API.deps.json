@@ -6,12 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "webscrapping.API/1.0.0": {
+      "WebScrapping.API/1.0.0": {
         "dependencies": {
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "WebScrapping.Application": "1.0.0",
+          "WebScrapping.Communication": "1.0.0",
+          "WebScrapping.Exception": "1.0.0",
+          "WebScrapping.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "webscrapping.API.dll": {}
+          "WebScrapping.API.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -60,11 +64,59 @@
             "fileVersion": "6.5.0.0"
           }
         }
+      },
+      "WebScrapping.Application/1.0.0": {
+        "dependencies": {
+          "WebScrapping.Communication": "1.0.0",
+          "WebScrapping.Domain": "1.0.0",
+          "WebScrapping.Exception": "1.0.0"
+        },
+        "runtime": {
+          "WebScrapping.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Communication/1.0.0": {
+        "runtime": {
+          "WebScrapping.Communication.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Domain/1.0.0": {
+        "runtime": {
+          "WebScrapping.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Exception/1.0.0": {
+        "runtime": {
+          "WebScrapping.Exception.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Infrastructure/1.0.0": {
+        "dependencies": {
+          "WebScrapping.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WebScrapping.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
   "libraries": {
-    "webscrapping.API/1.0.0": {
+    "WebScrapping.API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -110,6 +162,31 @@
       "sha512": "sha512-OvbvxX+wL8skxTBttcBsVxdh73Fag4xwqEU2edh4JMn7Ws/xJHnY/JB1e9RoCb6XpDxUF3hD9A0Z1lEUx40Pfw==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    },
+    "WebScrapping.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Communication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Exception/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

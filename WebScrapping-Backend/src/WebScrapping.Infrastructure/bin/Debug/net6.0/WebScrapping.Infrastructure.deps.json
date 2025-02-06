@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WebScrapping.Infrastructure/1.0.0": {
+        "dependencies": {
+          "WebScrapping.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WebScrapping.Infrastructure.dll": {}
+        }
+      },
+      "WebScrapping.Domain/1.0.0": {
+        "runtime": {
+          "WebScrapping.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebScrapping.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

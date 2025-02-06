@@ -1,0 +1,16 @@
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\bin\Debug\net6.0\WebScrapping.Infrastructure.deps.json
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\bin\Debug\net6.0\WebScrapping.Infrastructure.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\bin\Debug\net6.0\WebScrapping.Infrastructure.pdb
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\bin\Debug\net6.0\WebScrapping.Domain.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\bin\Debug\net6.0\WebScrapping.Domain.pdb
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.csproj.AssemblyReference.cache
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.AssemblyInfoInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.AssemblyInfo.cs
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.csproj.CoreCompileInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.sourcelink.json
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrap.17CDDE09.Up2Date
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\refint\WebScrapping.Infrastructure.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\WebScrapping.Infrastructure.pdb
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Infrastructure\obj\Debug\net6.0\ref\WebScrapping.Infrastructure.dll

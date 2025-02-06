@@ -1,0 +1,12 @@
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\bin\Debug\net6.0\WebScrapping.Domain.deps.json
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\bin\Debug\net6.0\WebScrapping.Domain.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\bin\Debug\net6.0\WebScrapping.Domain.pdb
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.AssemblyInfoInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.AssemblyInfo.cs
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.csproj.CoreCompileInputs.cache
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.sourcelink.json
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\refint\WebScrapping.Domain.dll
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\WebScrapping.Domain.pdb
+D:\user\Documents\Dev\desafio-tecnico\WebScrapping-Backend\src\WebScrapping.Domain\obj\Debug\net6.0\ref\WebScrapping.Domain.dll

@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WebScrapping.Application/1.0.0": {
+        "dependencies": {
+          "WebScrapping.Communication": "1.0.0",
+          "WebScrapping.Domain": "1.0.0",
+          "WebScrapping.Exception": "1.0.0"
+        },
+        "runtime": {
+          "WebScrapping.Application.dll": {}
+        }
+      },
+      "WebScrapping.Communication/1.0.0": {
+        "runtime": {
+          "WebScrapping.Communication.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Domain/1.0.0": {
+        "runtime": {
+          "WebScrapping.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebScrapping.Exception/1.0.0": {
+        "runtime": {
+          "WebScrapping.Exception.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebScrapping.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Communication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebScrapping.Exception/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
