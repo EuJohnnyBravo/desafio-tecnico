@@ -2,6 +2,8 @@
 using WebScrapping.Application.AutoMapper;
 using WebScrapping.Application.UseCases.Food.GetAll;
 using WebScrapping.Application.UseCases.Food.Scrap;
+using WebScrapping.Application.UseCases.FoodComposition.GetByCode;
+using WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
 namespace WebScrapping.Application;
 
 public static class DependecyInjectionExtension
@@ -21,5 +23,7 @@ public static class DependecyInjectionExtension
     {
         services.AddScoped<IScrapFoodsUseCase, ScrapFoodsUseCase>();
         services.AddScoped<IGetAllFoodsUseCase, GetAllFoodsUseCase>();
+        services.AddScoped<IGetFoodCompositionByCodeUseCase, GetFoodCompositionByCodeUseCase>();
+        services.AddScoped<IRegisterFoodCompositionByCodeUseCase, RegisterFoodCompositionByCodeUseCase>();
     }
 }
