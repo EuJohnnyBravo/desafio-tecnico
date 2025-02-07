@@ -90,7 +90,6 @@ public class SearchFoodUseCase : ISearchFoodUseCase
     {
         var web = new HtmlWeb();
         var htmlDoc = web.Load(url);
-        Console.WriteLine(url);
         return htmlDoc.DocumentNode.SelectNodes(XPath);
     }
 
