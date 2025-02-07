@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScrapping.Application.AutoMapper;
+using WebScrapping.Application.UseCases.Food.GetAll;
 using WebScrapping.Application.UseCases.Food.Scrap;
 namespace WebScrapping.Application;
 
@@ -19,5 +20,6 @@ public static class DependecyInjectionExtension
     private static void AddUseCases(IServiceCollection services)
     {
         services.AddScoped<IScrapFoodsUseCase, ScrapFoodsUseCase>();
+        services.AddScoped<IGetAllFoodsUseCase, GetAllFoodsUseCase>();
     }
 }
