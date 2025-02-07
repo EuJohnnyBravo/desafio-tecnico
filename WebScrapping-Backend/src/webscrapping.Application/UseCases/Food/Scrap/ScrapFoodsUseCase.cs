@@ -8,7 +8,7 @@ using WebScrapping.Domain.Repositories.Foods;
 
 namespace WebScrapping.Application.UseCases.Food.Scrap;
 
-public class SearchFoodUseCase : ISearchFoodUseCase
+public class ScrapFoodsUseCase : IScrapFoodsUseCase
 {
     private readonly IFoodWriteOnlyRepository _respositoryWrite;
     private readonly IFoodReadOnlyRepository _respositoryRead;
@@ -19,7 +19,7 @@ public class SearchFoodUseCase : ISearchFoodUseCase
     private const string XPath = "//tbody/tr";
     private const int MaxPagesPerId = 10;
 
-    public SearchFoodUseCase(
+    public ScrapFoodsUseCase(
         IFoodWriteOnlyRepository respositoryWrite,
         IFoodReadOnlyRepository respositoryRead,
         IUnitOfWork unitOfWork,

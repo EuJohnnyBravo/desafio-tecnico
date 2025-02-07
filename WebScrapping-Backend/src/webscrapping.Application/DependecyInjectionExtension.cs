@@ -18,6 +18,6 @@ public static class DependecyInjectionExtension
 
     private static void AddUseCases(IServiceCollection services)
     {
-        services.AddScoped<ISearchFoodUseCase, SearchFoodUseCase>();
+        services.AddScoped<IScrapFoodsUseCase, ScrapFoodsUseCase>();
     }
 }

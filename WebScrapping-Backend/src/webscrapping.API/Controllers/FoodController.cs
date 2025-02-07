@@ -10,7 +10,7 @@ public class FoodController : ControllerBase
 {
     [HttpPost]
     public async Task<IActionResult> SearchFood(
-        [FromServices] ISearchFoodUseCase useCase)
+        [FromServices] IScrapFoodsUseCase useCase)
     {
         var response = await useCase.Execute();
         return Created(string.Empty, response);
