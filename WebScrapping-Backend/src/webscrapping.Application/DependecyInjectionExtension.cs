@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScrapping.Application.AutoMapper;
-using WebScrapping.Application.UseCases.Food.Search;
+using WebScrapping.Application.UseCases.Food.Scrap;
 namespace WebScrapping.Application;
 
 public static class DependecyInjectionExtension

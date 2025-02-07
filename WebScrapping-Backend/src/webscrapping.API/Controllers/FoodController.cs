@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebScrapping.Application.UseCases.Food.Search;
+using WebScrapping.Application.UseCases.Food.Scrap;
 using WebScrapping.Communication.Requests;
 
 namespace WebScrapping.API.Controllers;
@@ -10,10 +10,9 @@ public class FoodController : ControllerBase
 {
     [HttpPost]
     public async Task<IActionResult> SearchFood(
-        [FromServices] ISearchFoodUseCase useCase,
-        [FromBody] RequestSearchFoodJson request)
+        [FromServices] ISearchFoodUseCase useCase)
     {
-        var response = await useCase.Execute(request);
+        var response = await useCase.Execute();
         return Created(string.Empty, response);
     }
 }
