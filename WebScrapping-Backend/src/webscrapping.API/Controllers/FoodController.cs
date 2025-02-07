@@ -14,6 +14,6 @@ public class FoodController : ControllerBase
         [FromBody] RequestSearchFoodJson request)
     {
         var response = await useCase.Execute(request);
-        return Ok(response);
+        return Created(string.Empty, response);
     }
 }

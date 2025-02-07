@@ -2,5 +2,5 @@
 
 public class ResponseSearchFoodJson
 {
-    public List<string> Code { get; set; } = new List<string>();
+    public List<string> FoodCode { get; set; } = new List<string>();
 }
