@@ -19,22 +19,21 @@ internal class FoodRepository : IFoodWriteOnlyRepository, IFoodReadOnlyRepositor
         await _dbContext.SaveChangesAsync();
     }
 
-    public Task<bool> Delete(long id)
+    public async Task<List<Food>> GetAll()
     {
-        //TODO: Implement this method
-        throw new NotImplementedException();
-    }
-
-    public Task<List<Food>> GetAll()
-    {
-        //TODO: Implement this method
-        throw new NotImplementedException();
+        return await _dbContext.Foods.AsNoTracking().ToListAsync();
     }
 
     public async Task<Food?> GetByCode(string code)
     {
         return await _dbContext.Foods
-            .AsNoTracking()  // <- Isso impede que o EF Core rastreie a entidade
+            .AsNoTracking()
             .FirstOrDefaultAsync(f => f.Code == code);
+    }
+
+    async Task<bool> IFoodReadOnlyRepository.Exists(string code)
+    {
+        var food = await GetByCode(code);
+        return food != null;
     }
 }

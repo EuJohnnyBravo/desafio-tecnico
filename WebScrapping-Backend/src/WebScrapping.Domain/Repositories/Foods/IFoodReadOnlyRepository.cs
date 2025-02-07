@@ -6,4 +6,6 @@ public interface IFoodReadOnlyRepository
 {
     Task<List<Food>> GetAll();
     Task<Food?> GetByCode(string code);
+    Task<bool> Exists(string code);
+
 }

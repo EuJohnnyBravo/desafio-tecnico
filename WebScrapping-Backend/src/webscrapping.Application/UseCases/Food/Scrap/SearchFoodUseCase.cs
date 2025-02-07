@@ -2,6 +2,7 @@
 using HtmlAgilityPack;
 using WebScrapping.Communication.DataScrap;
 using WebScrapping.Communication.Responses;
+using WebScrapping.Domain.DataAccess.Repositories;
 using WebScrapping.Domain.Repositories;
 using WebScrapping.Domain.Repositories.Foods;
 
@@ -9,7 +10,8 @@ namespace WebScrapping.Application.UseCases.Food.Scrap;
 
 public class SearchFoodUseCase : ISearchFoodUseCase
 {
-    private readonly IFoodWriteOnlyRepository _respository;
+    private readonly IFoodWriteOnlyRepository _respositoryWrite;
+    private readonly IFoodReadOnlyRepository _respositoryRead;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
@@ -18,12 +20,14 @@ public class SearchFoodUseCase : ISearchFoodUseCase
     private const int MaxPagesPerId = 10;
 
     public SearchFoodUseCase(
-        IFoodWriteOnlyRepository respository,
+        IFoodWriteOnlyRepository respositoryWrite,
+        IFoodReadOnlyRepository respositoryRead,
         IUnitOfWork unitOfWork,
         IMapper mapper)
     {
         _mapper = mapper;
-        _respository = respository;
+        _respositoryWrite = respositoryWrite;
+        _respositoryRead = respositoryRead;
         _unitOfWork = unitOfWork;
     }
 
@@ -34,7 +38,8 @@ public class SearchFoodUseCase : ISearchFoodUseCase
         Console.WriteLine("Entities: " + entities.Count);
         foreach (var entity in entities)
         {
-            await _respository.Add(entity);
+            if(!await _respositoryRead.Exists(entity.Code))
+                await _respositoryWrite.Add(entity);
         }
         await _unitOfWork.Commit();
 
