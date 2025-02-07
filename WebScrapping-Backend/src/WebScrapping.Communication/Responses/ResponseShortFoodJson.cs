@@ -2,5 +2,5 @@
 
 public class ResponseShortFoodJson
 {
-    public List<ResponseFoodsJson> Foods { get; set; } = new List<ResponseFoodsJson>();
+    public string Name { get; set; } = string.Empty;
 }

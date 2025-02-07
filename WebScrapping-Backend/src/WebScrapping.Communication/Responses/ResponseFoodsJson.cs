@@ -2,8 +2,5 @@
 
 public class ResponseFoodsJson
 {
-    public string Code { get; set; } = string.Empty;
-    public string Name { get; set; } = string.Empty;
-    public string ScientificName { get; set; } = string.Empty;
-    public string Group { get; set; } = string.Empty;
+    public List<ResponseSingleFoodJson> Foods { get; set; } = new List<ResponseSingleFoodJson>();
 }

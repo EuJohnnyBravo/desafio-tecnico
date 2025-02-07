@@ -31,11 +31,10 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<ResponseShortFoodJson> Execute()
+    public async Task<ResponseRegisterFoodsJson> Execute()
     {
         var foods = ScrapFood();
         var entities = _mapper.Map<List<Domain.Entities.Food>>(foods);
-        Console.WriteLine("Entities: " + entities.Count);
         foreach (var entity in entities)
         {
             if(!await _respositoryRead.Exists(entity.Code))
@@ -43,9 +42,9 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
         }
         await _unitOfWork.Commit();
 
-        return new ResponseShortFoodJson
+        return new ResponseRegisterFoodsJson
         {
-            Foods = _mapper.Map<List<ResponseFoodsJson>>(entities)
+            Foods = _mapper.Map<List<ResponseShortFoodJson>>(entities)
         };
     }
 
@@ -64,7 +63,6 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
 
             ExtractFoodsFromRows(rows, foods);
 
-            Console.WriteLine(url);
             page++;
             countPage++;
 

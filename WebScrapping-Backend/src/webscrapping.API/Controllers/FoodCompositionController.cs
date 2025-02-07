@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
 
 namespace WebScrapping.API.Controllers
 {
@@ -7,6 +8,13 @@ namespace WebScrapping.API.Controllers
     [ApiController]
     public class FoodCompositionController : ControllerBase
     {
-
+        [HttpPost]
+        [Route("code")]
+        public Task<IActionResult> RegisterFoodComposition(
+            [FromServices] IRegisterFoodCompositionByCodeUseCase useCase,
+            [FromRoute] string code)
+        {
+            return Task.FromResult<IActionResult>(Ok());
+        }
     }
 }

@@ -11,6 +11,7 @@ public class AutoMapping : Profile
     {
         ScrapToEntity();
         EntityToResponse();
+        ResponseToEntity();
     }
 
     private void ScrapToEntity()
@@ -18,12 +19,18 @@ public class AutoMapping : Profile
         CreateMap<ScrapFood, Food>();
     }
 
+    private void ResponseToEntity()
+    {
+        CreateMap<ResponseRegisterFoodsJson, Food>();
+    }
+
     private void EntityToResponse()
     {
-        CreateMap<Food, ResponseFoodsJson>();
-        CreateMap<Food, ResponseShortFoodJson>()
+        CreateMap<Food, ResponseSingleFoodJson>();
+        CreateMap<Food, ResponseFoodsJson>()
             .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
-        CreateMap<List<Food>, ResponseShortFoodJson>()
+        CreateMap<List<Food>, ResponseFoodsJson>()
             .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
+        CreateMap<Food, ResponseShortFoodJson>();
     }
 }

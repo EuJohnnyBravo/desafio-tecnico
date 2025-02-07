@@ -4,7 +4,7 @@ namespace WebScrapping.Application.UseCases.Food.Scrap;
 
 public interface IScrapFoodsUseCase
 {
-    Task<ResponseShortFoodJson> Execute();
+    Task<ResponseRegisterFoodsJson> Execute();
 }
 
 
