@@ -1,4 +1,4 @@
-﻿namespace WebScrapping.Application.UseCases.FoodComposition.GetByCode;
+﻿namespace WebScrapping.Application.UseCases.FoodCompositions.GetByCode;
 
 public class GetFoodCompositionByCodeUseCase : IGetFoodCompositionByCodeUseCase
 {

@@ -1,6 +1,6 @@
 ﻿using WebScrapping.Communication.Responses;
 
-namespace WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
+namespace WebScrapping.Application.UseCases.FoodCompositions.RegisterByCode;
 
 public interface IRegisterFoodCompositionByCodeUseCase
 {

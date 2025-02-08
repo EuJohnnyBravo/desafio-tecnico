@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebScrapping.Application.UseCases.FoodCompositions.RegisterByCode;
 
 namespace WebScrapping.API.Controllers
 {

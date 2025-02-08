@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using HtmlAgilityPack;
-using System.Globalization;
 using WebScrapping.Communication.DataScrap;
 using WebScrapping.Communication.Responses;
 using WebScrapping.Domain.DataAccess.Repositories;
+using WebScrapping.Domain.Entities;
 
-namespace WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
+namespace WebScrapping.Application.UseCases.FoodCompositions.RegisterByCode;
 
 public class RegisterFoodCompositionByCodeUseCase : IRegisterFoodCompositionByCodeUseCase
 {
@@ -22,10 +22,15 @@ public class RegisterFoodCompositionByCodeUseCase : IRegisterFoodCompositionByCo
         _mapper = mapper;
     }
 
-    public Task<ResponseRegisterFoodCompositionJson> Execute(string code)
+    public async Task<ResponseRegisterFoodCompositionJson> Execute(string code)
     {
-        var foodComposition = ScrapFoodComposition(code);
-        return Task.FromResult(new ResponseRegisterFoodCompositionJson());
+        var foodCompositions = ScrapFoodComposition(code);
+        var entities = _mapper.Map<List<FoodComposition>>(foodCompositions);
+        await _repositoryWrite.AddAll(entities);
+        return new ResponseRegisterFoodCompositionJson
+        {
+            Code = code
+        };
     }
 
     private List<ScrapFoodComposition> ScrapFoodComposition(string code)
@@ -58,7 +63,7 @@ public class RegisterFoodCompositionByCodeUseCase : IRegisterFoodCompositionByCo
                         DataType = cells.Count > 8 ? cells[8].InnerText.Trim() : ""
                     };
                     foodCompositions.Add(foodComposition);
-                    Console.WriteLine($"Componente: {foodComposition.Component}");
+                    Console.WriteLine($"Componente: {foodComposition.Component} FoodCode: {foodComposition.FoodCode}");
                 }
             }
         }

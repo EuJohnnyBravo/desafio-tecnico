@@ -36,11 +36,6 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
     {
         var foods = ScrapFood();
         var entities = _mapper.Map<List<Food>>(foods);
-        //foreach (var entity in entities)
-        //{
-        //    if(!await _respositoryRead.Exists(entity.Code))
-        //        await _respositoryWrite.Add(entity);
-        //}
         await _respositoryWrite.AddAll(entities);
         await _unitOfWork.Commit();
 
