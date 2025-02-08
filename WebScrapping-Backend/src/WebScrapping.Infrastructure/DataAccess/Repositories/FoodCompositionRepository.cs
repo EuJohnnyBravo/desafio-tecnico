@@ -1,27 +1,26 @@
-﻿using WebScrapping.Domain.DataAccess.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using WebScrapping.Domain.DataAccess.Repositories;
 using WebScrapping.Domain.Entities;
 
 namespace WebScrapping.Infrastructure.DataAccess.Repositories;
 
 internal class FoodCompositionRepository : IFoodCompositionWriteOnlyRepository, IFoodCompositionReadOnlyRepository
 {
-    public Task Add(Food food)
+    private readonly WebScrappingDbContext _dbContext;
+    public FoodCompositionRepository(WebScrappingDbContext dbContext)
     {
-        throw new NotImplementedException();
+        _dbContext = dbContext;
+    }
+    public async Task Add(FoodComposition foodComposition)
+    {
+        await _dbContext.FoodComposition.AddAsync(foodComposition);
+        await _dbContext.SaveChangesAsync();
     }
 
-    public Task<bool> Delete(long id)
+    public async Task<Food?> GetByCode(string code)
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<List<Food>> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Food?> GetById(long id)
-    {
-        throw new NotImplementedException();
+        return await _dbContext.Foods
+            .AsNoTracking()
+            .FirstOrDefaultAsync(f => f.Code == code);
     }
 }

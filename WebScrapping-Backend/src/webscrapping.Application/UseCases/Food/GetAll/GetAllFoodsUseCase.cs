@@ -17,9 +17,10 @@ public class GetAllFoodsUseCase : IGetAllFoodsUseCase
         _mapper = mapper;
     }
 
-    public async Task<List<ResponseSingleFoodJson>> Execute()
+    public async Task<ResponseFoodsJson> Execute()
     {
         var result = await _repository.GetAll();
-        return _mapper.Map<List<ResponseSingleFoodJson>>(result);
+        var mappedResult = _mapper.Map<List<ResponseSingleFoodJson>>(result);
+        return new ResponseFoodsJson { Foods = mappedResult };
     }
 }

@@ -10,11 +10,12 @@ namespace WebScrapping.API.Controllers
     {
         [HttpPost]
         [Route("code")]
-        public Task<IActionResult> RegisterFoodComposition(
+        public async Task<IActionResult> RegisterFoodComposition(
             [FromServices] IRegisterFoodCompositionByCodeUseCase useCase,
             [FromRoute] string code)
         {
-            return Task.FromResult<IActionResult>(Ok());
+            var response = await useCase.Execute(code);
+            return Created(string.Empty, response);
         }
     }
 }
