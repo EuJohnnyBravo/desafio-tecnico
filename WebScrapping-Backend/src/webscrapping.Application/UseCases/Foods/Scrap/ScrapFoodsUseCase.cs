@@ -6,6 +6,8 @@ using WebScrapping.Domain.DataAccess.Repositories;
 using WebScrapping.Domain.Repositories;
 using WebScrapping.Domain.Repositories.Foods;
 using WebScrapping.Domain.Entities;
+using WebScrapping.Exception.ExceptionsBase;
+using WebScrapping.Exception;
 
 namespace WebScrapping.Application.UseCases.Foods.Scrap;
 
@@ -74,7 +76,7 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
         }
 
         if (foods.Count == 0)
-            throw new Exception("Nenhuma informação encontrada.");
+            throw new NotFoundException(ResourceErrorMessages.FOOD_NOT_FOUND);
 
         return foods;
     }

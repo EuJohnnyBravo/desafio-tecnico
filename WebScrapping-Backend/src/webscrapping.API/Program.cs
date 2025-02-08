@@ -1,3 +1,4 @@
+using WebScrapping.API.Filters;
 using WebScrapping.Application;
 using WebScrapping.Infrastructure;
 
@@ -19,7 +20,7 @@ builder.Services.AddCors(options =>
 });
 
 //Adicionando o filtro de exceção
-//builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 //Adicionando Dependency Injection
 builder.Services.AddApplication();
