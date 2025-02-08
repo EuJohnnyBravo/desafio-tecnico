@@ -2,14 +2,16 @@ version: '3.8'
 
 services:
   postgres:
-    container_name: tbca-postgres
-    image: postgres
-    ports:
-      - '5432:5432'
+    image: postgres:13
+    container_name: tbca_postgres
     environment:
+      POSTGRES_DB: tbca
       POSTGRES_USER: user
       POSTGRES_PASSWORD: user
-      POSTGRES_DB: tbca
-      PGDATA: /data/postgres
+    ports:
+      - '5432:5432'
     volumes:
-      - ./data/pg:/data/postgres
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

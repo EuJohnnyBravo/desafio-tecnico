@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebScrapping.Application.UseCases.Food.GetAll;
-using WebScrapping.Application.UseCases.Food.Scrap;
+using WebScrapping.Application.UseCases.Foods.GetAll;
+using WebScrapping.Application.UseCases.Foods.Scrap;
 using WebScrapping.Communication.Responses;
 
 namespace WebScrapping.API.Controllers;

@@ -12,8 +12,8 @@ using WebScrapping.Infrastructure.DataAccess;
 namespace WebScrapping.Infrastructure.Migrations
 {
     [DbContext(typeof(WebScrappingDbContext))]
-    [Migration("20250207161439_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250208154326_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -89,7 +89,7 @@ namespace WebScrapping.Infrastructure.Migrations
 
                     b.HasIndex("FoodCode");
 
-                    b.ToTable("FoodCompositions");
+                    b.ToTable("FoodComposition");
                 });
 
             modelBuilder.Entity("WebScrapping.Domain.Entities.FoodComposition", b =>

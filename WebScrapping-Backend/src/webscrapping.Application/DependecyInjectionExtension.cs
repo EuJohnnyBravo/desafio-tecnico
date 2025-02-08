@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScrapping.Application.AutoMapper;
-using WebScrapping.Application.UseCases.Food.GetAll;
-using WebScrapping.Application.UseCases.Food.Scrap;
+using WebScrapping.Application.UseCases.Foods.GetAll;
+using WebScrapping.Application.UseCases.Foods.Scrap;
 using WebScrapping.Application.UseCases.FoodComposition.GetByCode;
 using WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
 namespace WebScrapping.Application;

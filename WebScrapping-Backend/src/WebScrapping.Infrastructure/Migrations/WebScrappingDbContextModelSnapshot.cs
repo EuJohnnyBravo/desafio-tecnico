@@ -87,7 +87,7 @@ namespace WebScrapping.Infrastructure.Migrations
 
                     b.HasIndex("FoodCode");
 
-                    b.ToTable("FoodCompositions");
+                    b.ToTable("FoodComposition");
                 });
 
             modelBuilder.Entity("WebScrapping.Domain.Entities.FoodComposition", b =>

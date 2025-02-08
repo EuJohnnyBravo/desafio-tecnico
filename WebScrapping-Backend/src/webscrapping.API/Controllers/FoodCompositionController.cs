@@ -9,7 +9,7 @@ namespace WebScrapping.API.Controllers
     public class FoodCompositionController : ControllerBase
     {
         [HttpPost]
-        [Route("code")]
+        [Route("code/{code}")]
         public async Task<IActionResult> RegisterFoodComposition(
             [FromServices] IRegisterFoodCompositionByCodeUseCase useCase,
             [FromRoute] string code)

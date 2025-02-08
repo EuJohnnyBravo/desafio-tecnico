@@ -1,6 +1,6 @@
 ﻿using WebScrapping.Communication.Responses;
 
-namespace WebScrapping.Application.UseCases.Food.Scrap;
+namespace WebScrapping.Application.UseCases.Foods.Scrap;
 
 public interface IScrapFoodsUseCase
 {

@@ -3,7 +3,7 @@ using AutoMapper;
 using WebScrapping.Communication.Responses;
 using WebScrapping.Domain.DataAccess.Repositories;
 
-namespace WebScrapping.Application.UseCases.Food.GetAll;
+namespace WebScrapping.Application.UseCases.Foods.GetAll;
 
 public class GetAllFoodsUseCase : IGetAllFoodsUseCase
 {

@@ -16,6 +16,7 @@ public class AutoMapping : Profile
     private void ScrapToEntity()
     {
         CreateMap<ScrapFood, Food>();
+        CreateMap<ScrapFoodComposition, FoodComposition>();
     }
 
     private void EntityToResponse()
