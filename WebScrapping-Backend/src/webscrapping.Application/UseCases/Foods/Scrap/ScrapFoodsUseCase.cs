@@ -34,17 +34,12 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<ResponseRegisterFoodsJson> Execute()
+    public async Task Execute()
     {
         var foods = ScrapFood();
         var entities = _mapper.Map<List<Food>>(foods);
         await _respositoryWrite.AddAll(entities);
         await _unitOfWork.Commit();
-
-        return new ResponseRegisterFoodsJson
-        {
-            Foods = _mapper.Map<List<ResponseShortFoodJson>>(entities)
-        };
     }
 
     public List<ScrapFood> ScrapFood()

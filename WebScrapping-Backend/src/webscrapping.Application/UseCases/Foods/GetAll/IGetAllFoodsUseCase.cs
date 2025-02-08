@@ -4,5 +4,5 @@ namespace WebScrapping.Application.UseCases.Foods.GetAll;
 
 public interface IGetAllFoodsUseCase
 {
-    Task<ResponseFoodsJson> Execute();
+    Task<ResponseGetAllFoodJson> Execute();
 }

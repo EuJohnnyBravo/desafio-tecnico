@@ -22,11 +22,9 @@ public class AutoMapping : Profile
     private void EntityToResponse()
     {
         CreateMap<Food, ResponseSingleFoodJson>();
-        CreateMap<Food, ResponseFoodsJson>()
-            .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
-        CreateMap<List<Food>, ResponseFoodsJson>()
-            .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
-        CreateMap<Food, ResponseShortFoodJson>();
-        CreateMap<FoodComposition, ResponseRegisterFoodCompositionJson>();
+        CreateMap<List<Food>, ResponseGetAllFoodJson>();
+        CreateMap<FoodComposition, ResponseFoodCompositionJson>();
+        CreateMap<List<FoodComposition>, ResponseGetAllFoodCompositionByCodeJson>()
+            .ForMember(dest => dest.Compositions, opt => opt.MapFrom(src => src));
     }
 }

@@ -5,12 +5,7 @@ namespace WebScrapping.Infrastructure.DataAccess;
 
 public class WebScrappingDbContext : DbContext
 {
-    private DbContextOptions<WebScrappingDbContext> _options;
-
-    public WebScrappingDbContext(DbContextOptions<WebScrappingDbContext> options) : base(options)
-    {
-        _options = options;
-    }
+    public WebScrappingDbContext(DbContextOptions<WebScrappingDbContext> options) : base(options){}
 
     public DbSet<Food> Foods { get; set; } = null!;
     public DbSet<FoodComposition> FoodComposition { get; set; } = null!;

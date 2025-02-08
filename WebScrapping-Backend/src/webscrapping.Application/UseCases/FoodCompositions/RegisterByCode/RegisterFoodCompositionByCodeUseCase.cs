@@ -24,56 +24,63 @@ public class RegisterFoodCompositionByCodeUseCase : IRegisterFoodCompositionByCo
         _mapper = mapper;
     }
 
-    public async Task<ResponseRegisterFoodCompositionJson> Execute(string code)
+    public async Task Execute(string code)
     {
         var foodCompositions = ScrapFoodComposition(code);
         var entities = _mapper.Map<List<FoodComposition>>(foodCompositions);
         await _repositoryWrite.AddAll(entities);
-        return new ResponseRegisterFoodCompositionJson
-        {
-            Code = code
-        };
     }
-
     private List<ScrapFoodComposition> ScrapFoodComposition(string code)
     {
-        var foodCompositions = new List<ScrapFoodComposition>();
         string url = baseUrl + code;
+        var htmlDoc = LoadHtmlDocument(url);
+        var rows = GetTableRows(htmlDoc, XPath);
+
+        return rows != null ? ExtractFoodCompositions(rows, code) : throw new NotFoundException(ResourceErrorMessages.FOOD_COMPOSITION_NOT_FOUND);
+    }
+
+    private HtmlDocument LoadHtmlDocument(string url)
+    {
         var web = new HtmlWeb();
-        var htmlDoc = web.Load(url);
-        var rows = htmlDoc.DocumentNode.SelectNodes(XPath);
+        return web.Load(url);
+    }
 
-        if (rows != null)
+    private HtmlNodeCollection? GetTableRows(HtmlDocument htmlDoc, string xPath)
+    {
+        return htmlDoc.DocumentNode.SelectNodes(xPath);
+    }
+
+    private List<ScrapFoodComposition> ExtractFoodCompositions(HtmlNodeCollection rows, string code)
+    {
+        var foodCompositions = new List<ScrapFoodComposition>();
+
+        foreach (var row in rows)
         {
-            foreach (var row in rows)
+            var cells = row.SelectNodes("td");
+            if (cells != null && cells.Count >= 8)
             {
-                var cells = row.SelectNodes("td");
-
-                if (cells != null && cells.Count >= 8)
-                {
-                    var foodComposition = new ScrapFoodComposition
-                    {
-                        FoodCode = code,
-                        Component = cells[0].InnerText.Trim(),
-                        Unit = cells[1].InnerText.Trim(),
-                        ValuePer100g = TryParseDecimal(cells[2].InnerText),
-                        StandardDeviation = TryParseDecimal(cells[3].InnerText),
-                        MinimumValue = TryParseDecimal(cells[4].InnerText),
-                        MaximumValue = TryParseDecimal(cells[5].InnerText),
-                        NumberOfDataUsed = TryParseInt(cells[6].InnerText),
-                        Reference = cells[7].InnerText.Trim(),
-                        DataType = cells.Count > 8 ? cells[8].InnerText.Trim() : ""
-                    };
-                    foodCompositions.Add(foodComposition);
-                    Console.WriteLine($"Componente: {foodComposition.Component} FoodCode: {foodComposition.FoodCode}");
-                }
+                foodCompositions.Add(ParseFoodComposition(cells, code));
             }
         }
-        else
-        {
-            throw new NotFoundException(ResourceErrorMessages.FOOD_COMPOSITION_NOT_FOUND);
-        }
+
         return foodCompositions;
+    }
+
+    private ScrapFoodComposition ParseFoodComposition(HtmlNodeCollection cells, string code)
+    {
+        return new ScrapFoodComposition
+        {
+            FoodCode = code,
+            Component = cells[0].InnerText.Trim(),
+            Unit = cells[1].InnerText.Trim(),
+            ValuePer100g = TryParseDecimal(cells[2].InnerText),
+            StandardDeviation = TryParseDecimal(cells[3].InnerText),
+            MinimumValue = TryParseDecimal(cells[4].InnerText),
+            MaximumValue = TryParseDecimal(cells[5].InnerText),
+            NumberOfDataUsed = TryParseInt(cells[6].InnerText),
+            Reference = cells[7].InnerText.Trim(),
+            DataType = cells.Count > 8 ? cells[8].InnerText.Trim() : ""
+        };
     }
 
     static decimal? TryParseDecimal(string value)

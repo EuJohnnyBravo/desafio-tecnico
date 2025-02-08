@@ -10,16 +10,16 @@ namespace WebScrapping.API.Controllers;
 public class FoodController : ControllerBase
 {
     [HttpPost]
-    [ProducesResponseType(typeof(ResponseRegisterFoodsJson), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<IActionResult> SearchFood(
         [FromServices] IScrapFoodsUseCase useCase)
     {
-        var response = await useCase.Execute();
-        return Created(string.Empty, response);
+        await useCase.Execute();
+        return NoContent();
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResponseFoodsJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseGetAllFoodJson), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetAll(
         [FromServices] IGetAllFoodsUseCase useCase)
