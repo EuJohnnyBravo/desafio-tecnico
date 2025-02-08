@@ -4,5 +4,5 @@ namespace WebScrapping.Domain.DataAccess.Repositories;
 
 public interface IFoodCompositionReadOnlyRepository
 {
-    Task<Food?> GetById(long id);
+    Task<Food?> GetByCode(string code);
 }

@@ -16,14 +16,17 @@ public class AutoMapping : Profile
     private void ScrapToEntity()
     {
         CreateMap<ScrapFood, Food>();
+        CreateMap<ScrapFoodComposition, FoodComposition>();
     }
 
     private void EntityToResponse()
     {
-        CreateMap<Food, ResponseFoodsJson>();
-        CreateMap<Food, ResponseShortFoodJson>()
+        CreateMap<Food, ResponseSingleFoodJson>();
+        CreateMap<Food, ResponseFoodsJson>()
             .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
-        CreateMap<List<Food>, ResponseShortFoodJson>()
+        CreateMap<List<Food>, ResponseFoodsJson>()
             .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src));
+        CreateMap<Food, ResponseShortFoodJson>();
+        CreateMap<FoodComposition, ResponseRegisterFoodCompositionJson>();
     }
 }

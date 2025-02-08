@@ -5,4 +5,5 @@ namespace WebScrapping.Domain.Repositories.Foods;
 public interface IFoodWriteOnlyRepository
 {
     Task Add(Food food);
+    Task AddAll(List<Food> foods);
 }

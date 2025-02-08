@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="webscrapping.API\**" />
+    <EmbeddedResource Remove="webscrapping.API\**" />
+    <None Remove="webscrapping.API\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.36" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.29" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25" PrivateAssets="All" />

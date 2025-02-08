@@ -13,7 +13,7 @@ public class WebScrappingDbContext : DbContext
     }
 
     public DbSet<Food> Foods { get; set; } = null!;
-    public DbSet<FoodComposition> FoodCompositions { get; set; } = null!;
+    public DbSet<FoodComposition> FoodComposition { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

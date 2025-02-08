@@ -3,7 +3,7 @@ using AutoMapper;
 using WebScrapping.Communication.Responses;
 using WebScrapping.Domain.DataAccess.Repositories;
 
-namespace WebScrapping.Application.UseCases.Food.GetAll;
+namespace WebScrapping.Application.UseCases.Foods.GetAll;
 
 public class GetAllFoodsUseCase : IGetAllFoodsUseCase
 {
@@ -17,9 +17,10 @@ public class GetAllFoodsUseCase : IGetAllFoodsUseCase
         _mapper = mapper;
     }
 
-    public async Task<List<ResponseFoodsJson>> Execute()
+    public async Task<ResponseFoodsJson> Execute()
     {
         var result = await _repository.GetAll();
-        return _mapper.Map<List<ResponseFoodsJson>>(result);
+        var mappedResult = _mapper.Map<List<ResponseSingleFoodJson>>(result);
+        return new ResponseFoodsJson { Foods = mappedResult };
     }
 }

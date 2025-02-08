@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace WebScrapping.Infrastructure.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,7 +24,7 @@ namespace WebScrapping.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FoodCompositions",
+                name: "FoodComposition",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -42,9 +42,9 @@ namespace WebScrapping.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FoodCompositions", x => x.Id);
+                    table.PrimaryKey("PK_FoodComposition", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_FoodCompositions_Foods_FoodCode",
+                        name: "FK_FoodComposition_Foods_FoodCode",
                         column: x => x.FoodCode,
                         principalTable: "Foods",
                         principalColumn: "Code",
@@ -52,15 +52,15 @@ namespace WebScrapping.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_FoodCompositions_FoodCode",
-                table: "FoodCompositions",
+                name: "IX_FoodComposition_FoodCode",
+                table: "FoodComposition",
                 column: "FoodCode");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FoodCompositions");
+                name: "FoodComposition");
 
             migrationBuilder.DropTable(
                 name: "Foods");

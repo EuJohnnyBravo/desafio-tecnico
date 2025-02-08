@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebScrapping.Domain\WebScrapping.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

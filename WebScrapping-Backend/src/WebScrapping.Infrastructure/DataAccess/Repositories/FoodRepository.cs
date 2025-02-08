@@ -19,6 +19,22 @@ internal class FoodRepository : IFoodWriteOnlyRepository, IFoodReadOnlyRepositor
         await _dbContext.SaveChangesAsync();
     }
 
+    public async Task AddAll(List<Food> foods)
+    {
+        var existingFoods = await _dbContext.Foods.AsNoTracking()
+            .Where(f => foods.Select(food => food.Code).Contains(f.Code))
+            .Select(f => f.Code)
+            .ToListAsync();
+
+        var foodsToAdd = foods.Where(food => !existingFoods.Contains(food.Code)).ToList();
+
+        if(foodsToAdd.Any())
+        {
+            await _dbContext.Foods.AddRangeAsync(foodsToAdd);
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+
     public async Task<List<Food>> GetAll()
     {
         return await _dbContext.Foods.AsNoTracking().ToListAsync();

@@ -5,8 +5,9 @@ using WebScrapping.Communication.Responses;
 using WebScrapping.Domain.DataAccess.Repositories;
 using WebScrapping.Domain.Repositories;
 using WebScrapping.Domain.Repositories.Foods;
+using WebScrapping.Domain.Entities;
 
-namespace WebScrapping.Application.UseCases.Food.Scrap;
+namespace WebScrapping.Application.UseCases.Foods.Scrap;
 
 public class ScrapFoodsUseCase : IScrapFoodsUseCase
 {
@@ -31,21 +32,16 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<ResponseShortFoodJson> Execute()
+    public async Task<ResponseRegisterFoodsJson> Execute()
     {
         var foods = ScrapFood();
-        var entities = _mapper.Map<List<Domain.Entities.Food>>(foods);
-        Console.WriteLine("Entities: " + entities.Count);
-        foreach (var entity in entities)
-        {
-            if(!await _respositoryRead.Exists(entity.Code))
-                await _respositoryWrite.Add(entity);
-        }
+        var entities = _mapper.Map<List<Food>>(foods);
+        await _respositoryWrite.AddAll(entities);
         await _unitOfWork.Commit();
 
-        return new ResponseShortFoodJson
+        return new ResponseRegisterFoodsJson
         {
-            Foods = _mapper.Map<List<ResponseFoodsJson>>(entities)
+            Foods = _mapper.Map<List<ResponseShortFoodJson>>(entities)
         };
     }
 
@@ -64,7 +60,6 @@ public class ScrapFoodsUseCase : IScrapFoodsUseCase
 
             ExtractFoodsFromRows(rows, foods);
 
-            Console.WriteLine(url);
             page++;
             countPage++;
 

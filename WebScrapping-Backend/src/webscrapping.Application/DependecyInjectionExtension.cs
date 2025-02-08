@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScrapping.Application.AutoMapper;
-using WebScrapping.Application.UseCases.Food.GetAll;
-using WebScrapping.Application.UseCases.Food.Scrap;
-using WebScrapping.Application.UseCases.FoodComposition.GetByCode;
-using WebScrapping.Application.UseCases.FoodComposition.RegisterByCode;
+using WebScrapping.Application.UseCases.FoodCompositions.GetByCode;
+using WebScrapping.Application.UseCases.FoodCompositions.RegisterByCode;
+using WebScrapping.Application.UseCases.Foods.GetAll;
+using WebScrapping.Application.UseCases.Foods.Scrap;
 namespace WebScrapping.Application;
 
 public static class DependecyInjectionExtension

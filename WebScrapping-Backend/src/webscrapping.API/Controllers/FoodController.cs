@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebScrapping.Application.UseCases.Food.GetAll;
-using WebScrapping.Application.UseCases.Food.Scrap;
-using WebScrapping.Communication.Requests;
+using WebScrapping.Application.UseCases.Foods.GetAll;
+using WebScrapping.Application.UseCases.Foods.Scrap;
 using WebScrapping.Communication.Responses;
 
 namespace WebScrapping.API.Controllers;
@@ -11,7 +10,7 @@ namespace WebScrapping.API.Controllers;
 public class FoodController : ControllerBase
 {
     [HttpPost]
-    [ProducesResponseType(typeof(ResponseFoodsJson), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ResponseRegisterFoodsJson), StatusCodes.Status201Created)]
     public async Task<IActionResult> SearchFood(
         [FromServices] IScrapFoodsUseCase useCase)
     {
