@@ -4,6 +4,8 @@ using WebScrapping.Communication.DataScrap;
 using WebScrapping.Communication.Responses;
 using WebScrapping.Domain.DataAccess.Repositories;
 using WebScrapping.Domain.Entities;
+using WebScrapping.Exception;
+using WebScrapping.Exception.ExceptionsBase;
 
 namespace WebScrapping.Application.UseCases.FoodCompositions.RegisterByCode;
 
@@ -69,7 +71,7 @@ public class RegisterFoodCompositionByCodeUseCase : IRegisterFoodCompositionByCo
         }
         else
         {
-            throw new Exception("Não foi possível encontrar os dados da composição do alimento");
+            throw new NotFoundException(ResourceErrorMessages.FOOD_COMPOSITION_NOT_FOUND);
         }
         return foodCompositions;
     }
