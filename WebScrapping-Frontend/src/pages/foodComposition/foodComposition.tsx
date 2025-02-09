@@ -1,7 +1,12 @@
+import Header from '../../components/header';
+
 export default function FoodComposition() {
-	return (
-		<div>
-			<h1>Food Composition</h1>
-		</div>
-	);
+  return (
+    <>
+      <Header />
+      <div>
+        <h1>Food Composition</h1>
+      </div>
+    </>
+  );
 }
