@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebScrapping.Application.UseCases.Foods.GetAll;
+using WebScrapping.Application.UseCases.Foods.GetByCode;
 using WebScrapping.Application.UseCases.Foods.Scrap;
 using WebScrapping.Communication.Responses;
 
@@ -25,6 +26,22 @@ public class FoodController : ControllerBase
         [FromServices] IGetAllFoodsUseCase useCase)
     {
         var response = await useCase.Execute();
+        return Ok(response);
+    }
+
+    [HttpGet()]
+    [Route("code/{code}")]
+    [ProducesResponseType(typeof(ResponseSingleFoodJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetByCode(
+        [FromServices] IGetFoodByCodeUseCase useCase,
+        string code)
+    {
+        var response = await useCase.Execute(code);
+        if (response == null)
+        {
+            return NotFound(new ResponseErrorsJson("Food not found"));
+        }
         return Ok(response);
     }
 

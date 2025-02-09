@@ -28,6 +28,16 @@ export const getFoods = async (): Promise<Food[]> => {
   }
 };
 
+export const getFoodByCode = async (code: string): Promise<Food> => {
+  try {
+    const response = await api.get<Food>(`/food/${code}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
 export const postFoodComposition = async (code: string): Promise<number> => {
   try {
     const response = await api.post(`/foodComposition/${code}`);
