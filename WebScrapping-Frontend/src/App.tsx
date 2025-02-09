@@ -1,7 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router';
+import Home from './pages/home/home';
+import FoodComposition from './pages/foodComposition/foodComposition';
+
 export default function App() {
 	return (
-		<div>
-			<h1>Web Scrapping</h1>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path='/'
+					element={<Home />}
+				/>
+				<Route
+					path='/food/:foodCode'
+					element={<FoodComposition />}
+				/>
+			</Routes>
+		</BrowserRouter>
 	);
 }
