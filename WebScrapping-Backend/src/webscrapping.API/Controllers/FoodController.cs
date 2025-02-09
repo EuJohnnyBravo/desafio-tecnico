@@ -11,11 +11,11 @@ public class FoodController : ControllerBase
 {
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
-    public async Task<IActionResult> SearchFood(
+    public async Task<IActionResult> ScrapFoods(
         [FromServices] IScrapFoodsUseCase useCase)
     {
         await useCase.Execute();
-        return NoContent();
+        return Created(string.Empty, null);
     }
 
     [HttpGet]
