@@ -21,7 +21,6 @@ public class FoodController : ControllerBase
 
     [HttpGet]
     [ProducesResponseType(typeof(ResponseGetAllFoodJson), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetAll(
         [FromServices] IGetAllFoodsUseCase useCase)
     {
