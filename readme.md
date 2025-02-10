@@ -25,7 +25,15 @@ O backend é desenvolvido em .NET 6 e está localizado na pasta `WebScrapping-Ba
 ### Executando o Backend
 
 1. Abra a solução `desafio-webscrapping-backend.sln` no Visual Studio.
-2. Compile e execute o projeto.
+2. No Visual Studio, `ferramentas -> Gerenciador de Pacotes NuGet -> Console de Gerencidor de Pacotes`.
+
+![image](https://github.com/user-attachments/assets/90ce12ab-53b2-457d-bd25-15fcf1022050)
+
+3. Execute o comando `Update-Database` para executar as Migrations e criar as tabelas no banco de dados.
+
+![image](https://github.com/user-attachments/assets/5ef8a444-454e-46b2-9f94-2195b3059d15)
+ 
+4. Compile e execute o projeto.
 
 ## Frontend
 
@@ -60,6 +68,25 @@ O frontend é desenvolvido em React com TypeScript e está localizado na pasta `
 
 - `POST /api/foodComposition/code/{code}`: Realiza o web scraping da composição de um alimento pelo código.
 - `GET /api/foodComposition/code/{code}`: Retorna a composição de um alimento pelo código.
+
+## Exemplos do Projeto Rodando
+
+1. Caso o Front-end esteja rodando e o back-end não.
+   
+![image](https://github.com/user-attachments/assets/e25eaac0-a4ed-425c-a006-f69361c22ef8)
+
+3. Fron-end e Back-end rodando.
+   
+![image](https://github.com/user-attachments/assets/cfbba37f-1788-49da-9f93-62572f032aa4)
+
+4. Entrando em uma Comida, se ela não esstiver cadastrada no banco.
+   
+![image](https://github.com/user-attachments/assets/60e6641d-33e7-49d0-a59a-2124977375e3)
+
+6. Clicando em `captura de alimentos` deverá aparecer assim:
+   
+![image](https://github.com/user-attachments/assets/d6426db9-c58b-47c7-bd27-98012b0c777d)
+
 
 ## Contribuição
 
