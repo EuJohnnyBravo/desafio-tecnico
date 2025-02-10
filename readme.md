@@ -86,14 +86,3 @@ O frontend é desenvolvido em React com TypeScript e está localizado na pasta `
 6. Clicando em `captura de alimentos` deverá aparecer assim:
    
 ![image](https://github.com/user-attachments/assets/d6426db9-c58b-47c7-bd27-98012b0c777d)
-
-
-## Contribuição
-
-Sinta-se à vontade para contribuir com este projeto. Para isso, siga os passos abaixo:
-
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Faça o push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
