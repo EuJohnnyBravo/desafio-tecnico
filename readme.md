@@ -20,7 +20,7 @@ O backend é desenvolvido em .NET 6 e está localizado na pasta `WebScrapping-Ba
 ### Configuração
 
 1. Certifique-se de ter o Docker instalado.
-2. Execute o comando `docker-compose up` para iniciar o banco de dados PostgreSQL.
+2. Execute o comando `docker-compose up` na raíz do projeto para iniciar o banco de dados PostgreSQL.
 3. Configure a string de conexão no arquivo `appsettings.json` em `WebScrapping-Backend/src/webscrapping.API`.
 
 ### Executando o Backend
@@ -71,7 +71,3 @@ Sinta-se à vontade para contribuir com este projeto. Para isso, siga os passos 
 3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
 4. Faça o push para a branch (`git push origin feature/nova-feature`).
 5. Abra um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
