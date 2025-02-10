@@ -3,18 +3,12 @@ import Home from './pages/home/home';
 import FoodComposition from './pages/foodComposition/foodComposition';
 
 export default function App() {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/food/:foodCode'
-					element={<FoodComposition />}
-				/>
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/food/:code" element={<FoodComposition />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
