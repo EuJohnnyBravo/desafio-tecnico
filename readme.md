@@ -20,8 +20,7 @@ O backend é desenvolvido em .NET 6 e está localizado na pasta `WebScrapping-Ba
 ### Configuração
 
 1. Certifique-se de ter o Docker instalado.
-2. Execute o comando `docker-compose up` na raíz do projeto para iniciar o banco de dados PostgreSQL.
-3. Configure a string de conexão no arquivo `appsettings.json` em `WebScrapping-Backend/src/webscrapping.API`.
+2. Execute o comando `docker-compose up -d` na raíz do projeto para iniciar o banco de dados PostgreSQL.
 
 ### Executando o Backend
 
