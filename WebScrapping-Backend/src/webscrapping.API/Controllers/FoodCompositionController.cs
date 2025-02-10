@@ -24,7 +24,6 @@ namespace WebScrapping.API.Controllers
         [HttpGet]
         [Route("code/{code}")]
         [ProducesResponseType(typeof(ResponseGetAllFoodCompositionByCodeJson), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetFoodComposition(
             [FromServices] IGetFoodCompositionByCodeUseCase useCase,
             [FromRoute] string code)
