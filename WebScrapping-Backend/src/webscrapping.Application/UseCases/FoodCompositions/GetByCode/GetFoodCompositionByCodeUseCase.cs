@@ -21,10 +21,6 @@ public class GetFoodCompositionByCodeUseCase : IGetFoodCompositionByCodeUseCase
     public async Task<ResponseGetAllFoodCompositionByCodeJson> Execute(string code)
     {
         var result = await _repository.GetByCode(code);
-        if(result.Count == 0)
-        {
-            throw new NotFoundException(ResourceErrorMessages.FOOD_COMPOSITION_NOT_FOUND);
-        }
         return _mapper.Map<ResponseGetAllFoodCompositionByCodeJson>(result);
     }
 }

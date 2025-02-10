@@ -4,6 +4,7 @@ namespace WebScrapping.Communication.Responses;
 
 public class ResponseFoodCompositionJson
 {
+    public int Id { get; set; }
     public string FoodCode { get; set; } = string.Empty;
     public string Component { get; set; } = string.Empty;
     public string? Unit { get; set; }
