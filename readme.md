@@ -8,7 +8,7 @@ Este projeto é composto por um backend em .NET e um frontend em React com TypeS
 
 O backend é desenvolvido em .NET 6 e está localizado na pasta `WebScrapping-Backend`. Ele é responsável por realizar o web scraping e fornecer uma API para o frontend consumir.
 
-### Estrutura do Backend
+### Estrutura em camadas do Backend
 
 - **WebScrapping.API**: Contém os controladores e a configuração da API.
 - **WebScrapping.Application**: Contém os casos de uso e a lógica de aplicação.
@@ -45,6 +45,12 @@ O frontend é desenvolvido em React com TypeScript e está localizado na pasta `
 - **src/components**: Contém os componentes reutilizáveis.
 - **src/pages**: Contém as páginas da aplicação.
 - **src/types**: Contém as definições de tipos TypeScript.
+
+### Tecnologias utilizadas:
+
+1. TailwindCSS - para estilização.
+2. DaisyUi - Biblioteca de componentes.
+3. Axios - Ferramenta para realizar requisições HTTP
 
 ### Configuração
 
